@@ -1,0 +1,22 @@
+# 忽略 Python 编译缓存
+__pycache__/
+*.py[cod]
+
+# 忽略虚拟环境
+.venv/
+venv/
+env/
+
+# 忽略 IDE 配置 (VSCode/JetBrains)
+.vscode/
+.idea/
+
+# === 关键：忽略大模型权重 ===
+weight/
+*.safetensors
+*.bin
+*.pth
+
+# 忽略临时文件
+.DS_Store
+EOF
