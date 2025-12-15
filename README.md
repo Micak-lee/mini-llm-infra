@@ -112,15 +112,15 @@ curl -X POST "http://localhost:8000/v1/chat/completions" \
 ### Directory Structure
 ```text
 mini-llm-infra/
-©À©¤©¤ src/
-©¦   ©À©¤©¤ model.py           # Core Llama modeling + KV Cache logic
-©¦   ©À©¤©¤ kernel.py          # Custom OpenAI Triton kernels
-©¦   ©À©¤©¤ load_weights.py    # Offline weight loading & mapping logic
-©¦   ©À©¤©¤ api_server.py      # FastAPI server with SSE
-©¦   ©¸©¤©¤ benchmark_rmsnorm.py # Performance profiling scripts
-©À©¤©¤ weight/                # Local model storage (created on first run)
-©À©¤©¤ pyproject.toml         # Dependency config
-©¸©¤©¤ README.md
+??? src/
+?   ??? model.py           # Core Llama modeling + KV Cache logic
+?   ??? kernel.py          # Custom OpenAI Triton kernels
+?   ??? load_weights.py    # Offline weight loading & mapping logic
+?   ??? api_server.py      # FastAPI server with SSE
+?   ??? benchmark_rmsnorm.py # Performance profiling scripts
+??? weight/                # Local model storage (created on first run)
+??? pyproject.toml         # Dependency config
+??? README.md
 
 ```
 
