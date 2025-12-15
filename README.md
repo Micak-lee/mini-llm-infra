@@ -107,23 +107,6 @@ curl -X POST "http://localhost:8000/v1/chat/completions" \
 ```
 
 ---
-
-## Project Structure
-
-```text
-mini-llm-infra/
-??? src/
-?   ??? model.py           # Core Llama modeling + KV Cache logic
-?   ??? kernel.py          # Custom OpenAI Triton kernels
-?   ??? load_weights.py    # Offline weight loading & mapping logic
-?   ??? api_server.py      # FastAPI server with SSE
-?   ??? inference_kv.py    # CLI inference script for testing
-?   ??? benchmark_rmsnorm.py # Performance profiling scripts
-??? weight/                # Local model storage (created on first run)
-??? pyproject.toml         # Dependency config
-??? README.md              # Documentation
-```
-
 ### The KV Cache Mechanism
 Standard Transformer decoding requires re-calculating attention scores for all previous tokens at every step.
 
