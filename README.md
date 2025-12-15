@@ -108,8 +108,8 @@ curl -X POST "http://localhost:8000/v1/chat/completions" \
 
 ---
 
-## Architecture details
-### Directory Structure
+## Project Structure
+
 ```text
 mini-llm-infra/
 ??? src/
@@ -117,11 +117,11 @@ mini-llm-infra/
 ?   ??? kernel.py          # Custom OpenAI Triton kernels
 ?   ??? load_weights.py    # Offline weight loading & mapping logic
 ?   ??? api_server.py      # FastAPI server with SSE
+?   ??? inference_kv.py    # CLI inference script for testing
 ?   ??? benchmark_rmsnorm.py # Performance profiling scripts
 ??? weight/                # Local model storage (created on first run)
 ??? pyproject.toml         # Dependency config
-??? README.md
-
+??? README.md              # Documentation
 ```
 
 ### The KV Cache Mechanism
@@ -147,8 +147,3 @@ Triton kernels provide massive throughput benefits but incur a small Python-to-G
 * **Speculative Decoding:** Implement a draft model to further accelerate generation speed.
 
 ---
-
-
-```
-
-```
